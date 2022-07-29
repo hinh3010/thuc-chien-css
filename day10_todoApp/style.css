@@ -1,0 +1,93 @@
+
+:root{
+    --primaryColor : #e26e70;
+}
+
+*{
+    margin : 0 ;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient( 
+        45deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 50%, rgb(255, 204, 112) 100% 
+    );
+}
+
+.container{
+    width: 400px;
+    margin: 100px auto;
+    border-radius: 8px;
+    background: white ;
+    padding-top : 10px  ;
+    overflow: hidden;
+}
+form{
+    padding: 10px 20px;
+    border-bottom: 1px solid #aaa;
+    font-size: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+form input{
+    font-size: 24px;
+    width: 100%;
+    margin-right: 16px;
+    border : none ;
+    outline : none ;
+}
+form button{
+    background : yellowgreen ;
+    padding: 5px 15px;
+    color:  white;
+    font-weight: bold;
+    font-size: 20px;
+    border : none ;
+    outline : none ;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.todo{
+    list-style: none;
+}
+.todo li{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 22px;
+    cursor: pointer;
+    align-items: center;
+}
+.todo li span{
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.todo li i{
+    opacity: 0;
+    color : #aaa;
+}
+.todo li.completed{
+    color : #aaa;
+}
+.todo li.completed span{
+    text-decoration: line-through;
+}
+
+/*  hiệu ứng  */
+form button:hover{
+    transform: scale(0.9);
+}
+.todo li span:hover{
+    white-space: normal;
+}
+.todo li:hover i{
+    opacity: 1;
+}

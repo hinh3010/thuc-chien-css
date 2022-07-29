@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2? family = Odibee + Sans & family = Poppins: ital, wght @ 0,100; 0,200; 0,300; 0,400; 0,500; 0,600; 0,700; 0,800; 0,900; 1,100; 1,200; 1,300; 1,400; 1,500; 1,600; 1,700; 1,800; 1,900 & display = swap ');
+
+:root{
+    --primaryColor : #78c0c9;
+}
+
+*{
+    margin : 0 ;
+    padding : 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primaryColor);
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+.alert{
+    font-size: 40px;
+    padding : 10px 40px ;
+    font-weight: 700;
+    color: var(--primaryColor);
+    background : white ;
+    border-radius: 12px;
+    border : none ;
+    outline:  none;
+}
+.boxKeyCode{
+    width: 100%;
+}
+.boxKeyCode_result{
+    background : #17a2b8;
+    height: 200px;
+    width: 200px;
+    border : 4px solid white ;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    font-weight: 700;
+    margin: 0 auto 50px;
+    color : white ;
+}
+.boxKeyCode_detail{
+    width: 100%;
+    display: flex;
+}
+.boxKeyCode_detail .card{
+    margin: 0 auto ;
+    background : white ;
+    border-radius:6px ;
+    width: 20%;
+    overflow:  hidden;
+    border-radius: 8px;
+    border : none ;
+    outline : none ;
+}
+.boxKeyCode_detail .card p{
+    padding : 4px 10px ;
+    text-align: center;
+    font-style: 20px;
+}
+.card_name{
+    color : white ;
+    background : #17a2b8;
+    font-weight: 700;
+}
+.card_value{
+    font-weight: 500;
+    background : rgb(209, 205, 205);
+}
+
+
+/* hiệu ứng */
+.hidden{
+    display: none;
+}

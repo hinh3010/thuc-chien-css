@@ -1,0 +1,74 @@
+:root{
+    --primaryColor : #8cc84c;
+}
+
+*{
+    margin : 0 ;
+    padding : 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    overflow: hidden;
+    background : var(--primaryColor) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper{
+    background : white ;
+    border-radius: 10px;
+    width: 400px;
+    padding: 20px;
+}
+.title{
+    font-size: 22px;
+}
+.content{
+    border : 1px solid #888 ;
+    padding : 10px ;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.content li{
+    background : var(--primaryColor) ;
+    color : white ;
+    border-radius: 3px;
+    list-style: none;
+    margin  : 4px ;
+    padding: 4px;
+}
+.content li i{
+    font-size: 14px;
+    margin-left: 4px;
+    cursor: pointer;
+}
+.content input{
+    padding: 5px ;
+    outline : none ;
+    border : none ;
+    font-size: 20px;
+    flex : 1 ;
+    margin  : 4px ;
+    border-radius: 2px;
+}
+.remove_all{
+    background:  var(--primaryColor);
+    outline : none ;
+    border : none ;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* hiệu ứng */
+.remove_all{
+    transition: all 0.5s ease;
+}
+.remove_all:hover{
+    transform: scale(0.8);
+    opacity: 0.5;
+}

@@ -1,0 +1,96 @@
+*{
+    margin : 0 ;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    /* overflow: hidden; */
+    background: #dadada;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    width: 1200px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+/* image */
+.image{
+    width: 22%;
+    height: 180px;
+    border-radius: 6px;
+    overflow : hidden ;
+    margin : 20px 10px;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.5s;
+}
+
+/* hiệu ứng */
+.image:hover img{
+    transform: scale(1.2);
+}
+
+/* gallery */
+.gallery{
+    position : fixed ;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background : rgba(0,0,0,0.6) ;
+    align-items: center;
+    justify-content: center;
+    color:  white;
+    font-size: 40px;
+    opacity: 0;
+    pointer-events: none;
+    transform : scale(0.8) ;
+    transition : 0.5s ;
+}
+.gallery_inner{
+    width: 70%;
+    height: 70%;
+}
+.gallery_close{
+    position : fixed ;
+    top: 15px;
+    right: 25px;
+    cursor: pointer;
+    transition : 0.5s ;
+}
+.gallery_control{
+    position: absolute;
+    color: rgba(255,255,255,0.6);
+    cursor: pointer;
+}
+.gallery_control.prev{
+    left: 20px;
+}
+.gallery_control.next{
+    right: 20px;
+}
+
+/* hiệu ứng */
+.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform : scale(1) ;
+}
+.gallery_close:hover{
+    color : rgb(204, 41, 41) ;
+    transform : scale(1.2) ;
+}
+.hidden{
+    display: none;
+}

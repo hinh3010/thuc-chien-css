@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./fontawesome-free-6.0.0-beta3-web/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Weather App</title>
+</head>
+
+<body class="cold">
+    <div class="weatherApp">
+        <input type="text" class="search">
+        <div class="content hidden">
+            <h1 class="capital">
+                <span class="city"></span>
+                <span>,</span>
+                <span class="country"></span>
+            </h1>
+            <p class="time"></p>
+            <div class="temperature">
+                <span class="temp_value"></span>
+                <span><sup>o</sup>C</span>
+            </div>
+            <div class="short_desc"></div>
+            <div class="more_desc">
+                <div class="visibility">
+                    <i class="far fa-eye"></i>
+                    <span></span>
+                </div>
+                <div class="win">
+                    <i class="fas fa-wind"></i>
+                    <span></span>
+                </div>
+                <div class="humidity">
+                    <i class="fas fa-cloud-sun"></i>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./app.js"></script>
+
+</html>

@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2? family = Odibee + Sans & family = Poppins: ital, wght @ 0,100; 0,200; 0,300; 0,400; 0,500; 0,600; 0,700; 0,800; 0,900; 1,100; 1,200; 1,300; 1,400; 1,500; 1,600; 1,700; 1,800; 1,900 & display = swap ');
+
+:root{
+    --primaryColor : #e26e70;
+}
+
+*{
+    margin : 0 ;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient( 
+        45deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 50%, rgb(255, 204, 112) 100% 
+    );
+    font-family: "Poppins";
+    color:white ;
+}
+
+.openModalBtn{
+    padding : 20px 40px;
+    border : none ;
+    outline:  none;
+    border-radius: 6px;
+    position: relative;
+    top : 50% ;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background : black ;
+    font-size: 26px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.modal{
+    position: fixed;
+    top : 0 ;
+    height: 100vh;
+    width: 100vw;
+    background : rgba(0,0,0,0.6)
+}
+.modal_inner{
+    width: 450px;
+    height: 208px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform : translate(-50%,-50%) ;
+    background: #333;
+    border-radius: 6px;
+    overflow : hidden ;
+}
+.modal_inner-header{
+    display: flex;
+    justify-content:  space-between;
+    align-items: center;
+    padding : 15px ;
+    background: var(--primaryColor);
+}
+.modal_inner-header p{
+    font-size: 18px;
+}
+.modal_inner-header i{
+    font-size: 24px ;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.25s;
+}
+.modal_inner-body{
+    padding : 15px ;
+}
+.modal_inner-body h2{
+    color : var(--primaryColor) ;
+    margin-bottom : 10px ;
+}
+.modal_inner-footer{
+    padding : 15px ;
+    text-align: right;
+}
+.modal_inner-footer button{
+    background: var(--primaryColor);
+    padding : 10px 20px ;
+    border-radius: 6px;
+    border : none ;
+    outline : none ;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+/* hiệu ứng */
+.openModalBtn:hover{
+    font-size: 30px;
+    color : var(--primaryColor);
+}
+.modal_inner-header i:hover,
+.modal_inner-footer button:hover{
+    opacity: 1;
+}
+
+.hidden{
+    display: none;
+}
+@keyframes modalInnerShow{
+    from{
+        top:-200px ;
+        opacity: 0;
+    }to{
+        top: 50%;
+        opacity: 1;
+    }
+}
+@keyframes modalShow{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+.modal_inner{
+    animation: modalInnerShow 0.5s linear;
+}
+.modal{
+    animation: modalShow 0.7s linear;
+}
